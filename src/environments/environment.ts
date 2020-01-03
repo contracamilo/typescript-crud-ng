@@ -11,7 +11,8 @@ export const environment = {
     projectId: "typecript-acdm",
     storageBucket: "typecript-acdm.appspot.com",
     messagingSenderId: "469206392562",
-    appId: "1:469206392562:web:cc4e0563b400ec12d03a6b"
+    appId: "1:469206392562:web:cc4e0563b400ec12d03a6b",
+    measurementId: "G-NVBMLZ2W87"
   }
 };
 
