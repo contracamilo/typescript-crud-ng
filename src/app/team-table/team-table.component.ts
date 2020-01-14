@@ -1,11 +1,10 @@
 // tslint:disable-next-line: quotemark
 import { Component, OnInit } from "@angular/core";
-import { TeamService } from "../services/team.service";
 import { Observable } from "rxjs";
 import { take } from "rxjs/operators";
 import { Team } from "../interfaces/team";
 import { Countries } from "../interfaces/player";
-import { TeamTableHeaders } from "../services/team.service";
+import { TeamService, TeamTableHeaders } from "../services/team.service";
 
 @Component({
   selector: "app-team-table",
@@ -26,10 +25,11 @@ export class TeamTableComponent implements OnInit {
       .subscribe(teams => {
         if (teams.length === 0) {
           const team: Team = {
-            name: "Camilo",
-            country: Countries.Argentina,
-            players: null
+            $name: "MyAmazingTeam",
+            $country: Countries.Argentina,
+            $players: null
           };
+
           this.teamService.addTeam(team);
         }
       });
